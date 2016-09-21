@@ -8,7 +8,6 @@ var imdb = require('imdb-api');
 
 module.exports = {
 	index: function(req,res){
-        sails.log.info(`${req.method}: ${req.path}`);
         Imdb.find().then(function(response){
             res.ok(response);
         });
